@@ -1,0 +1,1 @@
+java.exe -Xmx128m -cp GitCmSystemCmd.jar;fitnesse-standalone.jar fitnesseMain.FitNesseMain -p 8888 -e 0 -o

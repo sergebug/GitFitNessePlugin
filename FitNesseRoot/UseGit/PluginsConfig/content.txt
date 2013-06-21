@@ -1,0 +1,6 @@
+{{{
+git.path=c:/Git/bin/git.exe
+#git.add=add
+#git.delete=
+#git.commit=commit
+}}}

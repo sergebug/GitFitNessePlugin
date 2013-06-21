@@ -1,0 +1,33 @@
+# Tipical exclude files for FitNesse
+####################################
+# files by extention
+####################################
+*.zip
+*.jar
+*.dll
+*.pdb
+*.config
+####################################
+# Folders
+####################################
+/files/
+/ErrorLogs/
+/FrontPage
+/FitNesse
+/PageFooter
+/PageHeader
+/RecentChanges
+####################################
+# Files from the FitNesseRoot folder itself
+####################################
+/content.txt
+/properties
+/properties.xml
+/updateDoNotCopyOverList
+/updateList
+####################################
+# Files above FitNesseRoot folder 
+####################################
+plugins.properties
+*.bat
+*.cmd

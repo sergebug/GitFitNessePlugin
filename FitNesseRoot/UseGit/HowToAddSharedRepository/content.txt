@@ -1,0 +1,9 @@
+Shared repository must be created with '''--bare''' option
+Given that our demo folder name is 'FitNesse.git.demo'
+{{{
+cd "\\sti-files\stemsoft\GIT - Git\"
+md FitNesse.git.demo
+git --bare init
+}}}
+
+!note Make sure you don't accidentally end your folder name with '.git' - otherwise git strips it during cloning.

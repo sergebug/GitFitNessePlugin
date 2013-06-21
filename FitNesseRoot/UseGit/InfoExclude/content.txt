@@ -1,0 +1,42 @@
+{{{
+# git ls-files --others --exclude-from=.git/info/exclude
+# Lines that start with '#' are comments.
+# For a project mostly in C, the following would be a good set of
+# exclude patterns (uncomment them if you want to use them):
+# *.[oa]
+# *~
+# Tipical exclude files for FitNesse
+####################################
+# files by extention
+####################################
+*.zip
+*.jar
+*.dll
+*.pdb
+*.config
+
+####################################
+# Folders
+####################################
+/FitNesseRoot/files/
+/FitNesseRoot/ErrorLogs/
+/FitNesseRoot/FrontPage
+/FitNesseRoot/FitNesse
+/FitNesseRoot/PageFooter
+/FitNesseRoot/PageHeader
+/FitNesseRoot/RecentChanges
+####################################
+# Files from the FitNesseRoot folder itself
+####################################
+/FitNesseRoot/content.txt
+/FitNesseRoot/properties
+/FitNesseRoot/properties.xml
+/FitNesseRoot/updateDoNotCopyOverList
+/FitNesseRoot/updateList
+####################################
+# Files above FitNesseRoot folder 
+####################################
+plugins.properties
+*.bat
+*.cmd
+}}}

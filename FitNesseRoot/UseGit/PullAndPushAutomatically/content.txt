@@ -1,0 +1,15 @@
+Given following batch file:
+{{{
+git pull origin master
+java.exe -cp GitCmSystemCmd.jar;fitnesse-standalone.jar fitnesseMain.FitNesseMain -p 8888 -e 0 -o
+git push origin master
+}}}
+
+Following will occur:
+ #1 Prior to fitnesse launch git will pull all the recent changes from origin shared source 
+ #2 Fitnesse launches "as usual" and all the editing will be committed to the local snapshot
+ #3 If user shuts down fitness using [[.?shutdown][.?shutdown]]
+ * All the local changes will be propagated to the shared repository
+ #4 If user terminates batch file then local changes don't make to shared repository.
+
+!note If the are merge conficts push will fail and merge has to be performed manually.

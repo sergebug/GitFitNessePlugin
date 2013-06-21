@@ -1,0 +1,16 @@
+!3 This page and all pages below it are under ''GIT'' source control.
+''GIT'' control is enforced via CM_SYSTEM variable defined below.
+Repository folder is in <!-FitNesse-! folder> and called '''.git'''
+Files which match '''[[<!-FitNesse-! folder>/.git/info/exclude][^InfoExclude]]''' content are not source controlled.
+
+!define CM_SYSTEM {fitnesse.wiki.cmSystems.GitCmSystemCmd} 
+!path *.jar
+!path \tools\FitNesse\fitnesse-standalone.jar
+
+ * To make plugin work you will need to install ''GIT'' locally (msysgit)
+ * After git installed configure at least --global (username and email)
+!-git config --global user.name "Your Name"-!
+!-git config --global user.email you@example.com-!
+ * To see what should be placed in the plugins.config file see ^PluginsConfig
+
+!contents -R2 -g -p -f -h
