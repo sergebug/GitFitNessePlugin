@@ -7,7 +7,6 @@ Please see http://fitnesse.org/FitNesse.UserGuide.SourceCodeControl
 Given the following folder structure
  
   FitNesse
-  
   |---FitNesseRoot  
   |---fitnesse-standalone.jar  
   FitNesse-git  
