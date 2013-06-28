@@ -15,6 +15,7 @@ public class GitDelegate {
     private String ADD = null;
     private String DELETE = null;
     private String COMMIT = null;
+    private String FETCH = null;
     private CommandExecutor executor = new CommandExecutor();
 
     public void update(String file) throws Exception {
@@ -33,6 +34,11 @@ public class GitDelegate {
         executor.voidExec(gitPath() + " " + COMMIT + " " + amendOnSameToken(newToken) +"--message \"" + commitMessage() + "\"");
     }
 
+    public void fetch() throws Exception {
+    	if (FETCH == null) FETCH = gitProperty("fetch","fetch");
+    	executor.voidExec(gitPath() +  " " + FETCH);
+    }
+    
     protected String amendOnSameToken(String newToken){
     	if (COMMIT_TOKEN == null) {
     		COMMIT_TOKEN = newToken;

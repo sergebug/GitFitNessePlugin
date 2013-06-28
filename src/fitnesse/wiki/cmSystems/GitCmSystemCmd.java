@@ -36,6 +36,7 @@ public class GitCmSystemCmd {
 	  }
 
 	  public static void cmEdit(String file, String payload) throws Exception {
+		  gitDelegate.fetch();
 	  }
 
 	  public static void cmDelete(String file, String payload) throws Exception {
@@ -44,6 +45,7 @@ public class GitCmSystemCmd {
 	  }
 
 	  public static void cmPreDelete(String file, String payload) throws Exception {
+		  gitDelegate.fetch();
 	  }
 
 	}
