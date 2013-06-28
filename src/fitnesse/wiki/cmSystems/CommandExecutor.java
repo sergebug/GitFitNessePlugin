@@ -3,6 +3,7 @@ import fitnesse.components.CommandRunner;
 
 public class CommandExecutor {
   public CommandRunner exec(String command) {
+	System.err.println(command);
     CommandRunner runner = new CommandRunner(command, "");
     try {
       runner.run();
