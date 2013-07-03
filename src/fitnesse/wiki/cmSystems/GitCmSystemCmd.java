@@ -31,21 +31,27 @@ public class GitCmSystemCmd {
 	  private static final GitDelegate gitDelegate = new GitDelegate();
 
 	  public static void cmUpdate(String file, String payload) throws Exception {
-	    gitDelegate.update(file);
-	    gitDelegate.commit();
+		  gitDelegate.update(file);
+		  gitDelegate.commit();
+		  gitDelegate.merge();
+		  gitDelegate.push();
 	  }
 
 	  public static void cmEdit(String file, String payload) throws Exception {
 		  gitDelegate.fetch();
+		  gitDelegate.merge();
 	  }
 
 	  public static void cmDelete(String file, String payload) throws Exception {
-	    gitDelegate.delete(file);
-	    gitDelegate.commit();
+		  gitDelegate.delete(file);
+		  gitDelegate.commit();
+		  gitDelegate.merge();
+		  gitDelegate.push();
 	  }
 
 	  public static void cmPreDelete(String file, String payload) throws Exception {
 		  gitDelegate.fetch();
+		  gitDelegate.merge();
 	  }
 
 	}

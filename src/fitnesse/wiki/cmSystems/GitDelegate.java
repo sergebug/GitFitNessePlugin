@@ -16,6 +16,8 @@ public class GitDelegate {
     private String DELETE = null;
     private String COMMIT = null;
     private String FETCH = null;
+    private String PUSH = null;
+    private String MERGE = null;
     private CommandExecutor executor = new CommandExecutor();
 
     public void update(String file) throws Exception {
@@ -35,10 +37,34 @@ public class GitDelegate {
     }
 
     public void fetch() throws Exception {
-    	if (FETCH == null) FETCH = gitProperty("fetch","fetch");
-    	executor.voidExec(gitPath() +  " " + FETCH);
+    	if (FETCH == null) FETCH = gitProperty("fetch","");
+    	if (FETCH.equals("")) {
+    		return; // fetch is optional
+    	}
+    	else {
+    		executor.voidExec(gitPath() +  " " + FETCH);
+    	};
     }
     
+    public void merge() throws Exception {
+    	if (MERGE == null) MERGE = gitProperty("merge","");
+    	if (MERGE.equals("")) {
+    		return; // merge is optional
+    	}
+    	else {
+    		executor.voidExec(gitPath() +  " " + MERGE);
+    	};
+    }
+
+    public void push() throws Exception {
+    	if (PUSH == null) PUSH = gitProperty("push","");
+    	if (PUSH.equals("")) {
+    		return; // merge is optional
+    	}
+    	else {
+    		executor.voidExec(gitPath() +  " " + PUSH);
+    	};
+    }
     protected String amendOnSameToken(String newToken){
     	if (COMMIT_TOKEN == null) {
     		COMMIT_TOKEN = newToken;
