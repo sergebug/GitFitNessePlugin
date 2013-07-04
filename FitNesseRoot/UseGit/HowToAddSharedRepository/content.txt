@@ -1,7 +1,7 @@
 Shared repository must be created with '''--bare''' option
 Given that our demo folder name is 'FitNesse.git.demo'
 {{{
-cd "\\sti-files\stemsoft\GIT - Git\"
+cd "\\share\GIT - Git\"
 md FitNesse.git.demo
 git --bare init
 }}}

@@ -1,1 +1,1 @@
-{{{git clone file://\\\\sti-files\stemsoft\GIT%20-%20Git\FitNesse.git.demo}}}
+{{{git clone file://\\\\share\GIT%20-%20Git\FitNesse.git.demo}}}
